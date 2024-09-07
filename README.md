@@ -1,1 +1,1 @@
-# DeepLearning-MachineLearning-MatrixTheory-Notes
+# DeepLearning_MachineLearning_MatrixTheory_Notes
