@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Deep Learning - Machine Learning - Matrix Theory Notes</title>
+    <style>
+        /* Additional styles for expandable content */
+        .content {
+            display: none; /* Initially hidden */
+            padding: 10px;
+            background-color: #fff; /* Background color for content */
+            border: 1px solid #ddd; /* Border to distinguish content */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            margin-bottom: 10px; /* Space below the expandable content */
+        }
+        
+        .button-container {
+            display: flex;
+            gap: 8px; /* Space between buttons */
+            margin-top: 0.4px; /* Space above the button container */
+        }
+        
+        .expand-btn, .view-notes-btn {
+            background-color: #0f2844; /* Primary button color */
+            color: white; /* Text color */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 20px; /* Button padding */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        
+        .expand-btn:hover, .view-notes-btn:hover {
+            background-color: #1e3b5a; /* Darker button color on hover */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -12,39 +44,57 @@
     </header>
     
     <main>
-    
         <p>These are the collections of my notes from my projects in Deep Learning, Machine Learning, Metric Learning, and Matrix Theory.</p>
 
-<ul>
-    <li>
-        <strong>Discrete Empirical Interpolation Method (DEIM)
-            </strong>
-       <br> 
-       <br>
-        Discrete Empirical Interpolation Method (DEIM) is a technique used in the field of nonlinear model reduction to efficiently approximate high-dimensional nonlinear systems. DEIM reduces the computational complexity of such systems by creating a lower-dimensional approximation that retains the essential dynamics of the original model. It works by constructing an empirical basis for the nonlinear terms and then projecting these terms onto a reduced space. This approach is particularly useful in scenarios where direct simulation of the full model is computationally prohibitive, allowing for faster and more efficient analyses while preserving the accuracy of the system's behavior. DEIM is commonly applied in engineering and scientific computing, where it facilitates real-time simulations and optimizations of complex systems.
-        <button onclick="window.location.href='page1.pdf'">View my notes in DEIM</button>
-    </li>
-    <li> <strong>
-        Deep Neural Networks
-    </strong>
-    <br>
-    <br>
-        Deep neural networks are a type of artificial intelligence that mimic the way the human brain processes information to recognize patterns and make decisions. These networks consist of multiple layers of interconnected nodes, or neurons, each of which performs a simple mathematical operation on the data. The architecture of a deep learning network typically includes an input layer, several hidden layers, and an output layer. Each layer is made up of many neurons that receive input from the previous layer, process it, and pass it on to the next layer.
-        <br>
-        <br>
-        When data enters the network, it begins at the input layer, which represents the raw information, such as images, text, or audio. The data is then passed through the hidden layers, where each neuron performs a weighted sum of the inputs and applies a non-linear function to this sum. This series of transformations helps the network learn complex features and patterns in the data.
-        <br>
-        <br>
-        To enable the network to make accurate predictions or classifications, it undergoes a training process involving large datasets. During training, the network adjusts the weights of the connections between neurons based on the errors it makes. This adjustment is guided by a technique called backpropagation, which helps the network refine its predictions by minimizing the difference between its outputs and the actual results.
-        <br>
-        <br>
-        As the network processes more data and adjusts its weights through many iterations, it becomes better at recognizing patterns and making accurate predictions. Once training is complete, the network can be used to make predictions on new, unseen data by passing it through the trained layers, resulting in an output that reflects the learned patterns. In summary, deep learning networks enhance their performance by learning from data through multiple layers of processing, adjusting connections based on errors, and continually improving their ability to make accurate decisions.
-        <button onclick="window.location.href='page2.pdf'">View my notes in DNNs</button>
-    </li>
-</ul>
+        <ul>
+            <li>
+                <strong>Discrete Empirical Interpolation Method (DEIM)</strong>
+                <br> 
+                <br>
+                <div class="button-container">
+                    <button class="expand-btn" onclick="toggleContent('deimContent')">View summary of DEIM / Hide summary</button>
+                    <button class="view-notes-btn" onclick="window.location.href='page1.pdf'">View my notes in DEIM</button>
+                </div>
+                <div class="content" id="deimContent">
+                    Discrete Empirical Interpolation Method (DEIM) is a technique used in the field of nonlinear model reduction to efficiently approximate high-dimensional nonlinear systems. DEIM reduces the computational complexity of such systems by creating a lower-dimensional approximation that retains the essential dynamics of the original model. It works by constructing an empirical basis for the nonlinear terms and then projecting these terms onto a reduced space. This approach is particularly useful in scenarios where direct simulation of the full model is computationally prohibitive, allowing for faster and more efficient analyses while preserving the accuracy of the system's behavior. DEIM is commonly applied in engineering and scientific computing, where it facilitates real-time simulations and optimizations of complex systems.
+                </div>
+            </li>
+            <li>
+                <strong>Deep Neural Networks</strong>
+                <br>
+                <br>
+                <div class="button-container">
+                    <button class="expand-btn" onclick="toggleContent('dnnsContent')">View summary of DNNs / Hide summary</button>
+                    <button class="view-notes-btn" onclick="window.location.href='page2.pdf'">View my notes in DNNs</button>
+                </div>
+                <div class="content" id="dnnsContent">
+                Deep neural networks are a type of artificial intelligence that mimic the way the human brain processes information to recognize patterns and make decisions. These networks consist of multiple layers of interconnected nodes, or neurons, each of which performs a simple mathematical operation on the data. The architecture of a deep learning network typically includes an input layer, several hidden layers, and an output layer. Each layer is made up of many neurons that receive input from the previous layer, process it, and pass it on to the next layer.
+                <br>
+                <br>
+                When data enters the network, it begins at the input layer, which represents the raw information, such as images, text, or audio. The data is then passed through the hidden layers, where each neuron performs a weighted sum of the inputs and applies a non-linear function to this sum. This series of transformations helps the network learn complex features and patterns in the data.
+                <br>
+                <br>
+                To enable the network to make accurate predictions or classifications, it undergoes a training process involving large datasets. During training, the network adjusts the weights of the connections between neurons based on the errors it makes. This adjustment is guided by a technique called backpropagation, which helps the network refine its predictions by minimizing the difference between its outputs and the actual results.
+                <br>
+                <br>
+                As the network processes more data and adjusts its weights through many iterations, it becomes better at recognizing patterns and making accurate predictions. Once training is complete, the network can be used to make predictions on new, unseen data by passing it through the trained layers, resulting in an output that reflects the learned patterns. In summary, deep learning networks enhance their performance by learning from data through multiple layers of processing, adjusting connections based on errors, and continually improving their ability to make accurate decisions.
+            </div>               
+            </li>
+        </ul>
     </main>
     <footer>
         <p>&copy; 2024 T. H. Molena</p>
     </footer>
+
+    <script>
+        function toggleContent(id) {
+    var content = document.getElementById(id);
+    if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+    } else {
+        content.style.display = 'none';
+    }
+}
+    </script>
 </body>
 </html>
