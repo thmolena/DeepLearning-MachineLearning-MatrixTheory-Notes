@@ -1,4 +1,4 @@
-# DeepLearning_MachineLearning_MatrixTheory_Notes
+# Deep Learning, Machine Learning, Matrix Theory Notes
 
 These are the collections of my notes from my projects in Deep Learning, Machine Learning, Metric Learning, and Matrix Theory.
 
